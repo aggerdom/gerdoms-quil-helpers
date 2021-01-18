@@ -1,6 +1,3 @@
-(ns gerdoms-quil-helpers.core)
-
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(ns gerdoms-quil-helpers.core
+  (:require [quil.core :as q]
+            [quil.middleware :as m]))
