@@ -35,7 +35,7 @@
    ranges from 1 to 0 in general.
 
   "
-  ([a b n] (interpolate a b n (smoothing-methods :linear)))
+  ([a b n] (interpolate- a b n (smoothing-methods :linear)))
   ([a b n tween]
    (->> (range n)
         (map #(/ % n))

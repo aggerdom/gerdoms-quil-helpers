@@ -18,12 +18,12 @@
        (map #(reduce + %))
        (map #(/ % (count points)))))
 
-(deftest test-centroid
-  (testing "Basic test"
-    (is (= (centroid [[0 0] [2 2] [0 2] [2 1]])
-           [1 5/4]))
-    (is (= (centroid [[0 0] [0 1] [1 1] [1 0]])
-           [1/2 1/2]))))
+;; (deftest test-centroid
+;;   (testing "Basic test"
+;;     (is (= (centroid [[0 0] [2 2] [0 2] [2 1]])
+;;            [1 5/4]))
+;;     (is (= (centroid [[0 0] [0 1] [1 1] [1 0]])
+;;            [1/2 1/2]))))
 
 
 ;; TODO: Deal with vertical points
