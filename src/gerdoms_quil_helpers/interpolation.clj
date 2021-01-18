@@ -60,6 +60,16 @@
          inclusive   (conj (vec pts) b)]
      inclusive)))
 
+(defn interpolate2
+  ([a b n] (interpolate2 a b n :linear))
+  ([a b n tween]
+   (->> (map vector a b) ;; Zip up coordinates
+        (map (fn [[c1 c2]]
+               (interpolate c1 c2 n tween)))
+        (apply (partial map vector)))))
+
+(map vector [1 1] [2 3])
+
 (interpolate 0 10 5) ;; => [0 2 4 6 8 10]
 (interpolate 10 0 5) ;; => [10 8 6 4 2 0]
 
